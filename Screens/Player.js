@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { WebView } from "react-native-webview";
+
 import YoutubePlayer from "react-native-youtube-iframe";
 
 export default class Player extends React.Component {

@@ -7,6 +7,7 @@ export default class VideoCard extends React.Component {
   };
 
   render() {
+    console.log(this.props.title);
     return (
       <View style={styles.card}>
         <View>
@@ -15,13 +16,13 @@ export default class VideoCard extends React.Component {
             source={{ uri: this.props.image }}
           />
         </View>
-        <View
-          style={{
-            alignItems: "stretch",
-            alignContent: "flex-start",
-          }}
-        >
-          <Text style={{ color: "white", fontWeight: "bold" }}>
+        <View>
+          <Text
+            style={{
+              color: "white",
+              fontWeight: "bold",
+            }}
+          >
             {this.props.title}
           </Text>
         </View>
@@ -31,12 +32,10 @@ export default class VideoCard extends React.Component {
 }
 const styles = StyleSheet.create({
   card: {
-    marginTop: 10,
     height: 220,
+    marginTop: 10,
     width: "100%",
-    borderEndColor: "black",
     backgroundColor: "black",
-    alignItems: "center",
-    justifyContent: "flex-start",
+    alignItems: "flex-start",
   },
 });

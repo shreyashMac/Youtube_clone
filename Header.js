@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Icon from "@expo/vector-icons/MaterialIcons";
 export default class Header extends React.Component {
   render() {
+    //console.log(this.props);
     return (
       <View style={styles.header}>
         <View
@@ -25,6 +26,7 @@ export default class Header extends React.Component {
           </TouchableOpacity>
           <TouchableOpacity>
             <Icon
+              onPress={() => this.props.navigation.navigate("Search")}
               style={styles.headerIcons}
               name="search"
               size={35}

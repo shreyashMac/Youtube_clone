@@ -35,10 +35,12 @@ export default class Home extends React.Component {
     this.getData();
   }
   render() {
+    console.log(this.state);
     return (
       <View style={styles.home}>
-        <Header />
+        <Header navigation={this.props.navigation} />
         <FlatList
+          style={styles.list}
           data={this.state.videoData}
           keyExtractor={(item) => item.id.videoId}
           renderItem={({ item }) => {
@@ -64,8 +66,7 @@ const styles = StyleSheet.create({
   home: {
     marginTop: 20,
     flex: 1,
-    backgroundColor: "red",
-    // alignItems: "stretch",
+    backgroundColor: "gray",
     justifyContent: "flex-start",
   },
 });
